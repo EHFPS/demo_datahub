@@ -1,0 +1,122 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.researchgate.release' version '2.8.1'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+group = 'com.bayer.datahub.libs'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+dependencies {
+    implementation('tech.allegro.schema.json2avro:converter:0.2.10'){exclude group: 'org.apache.avro'}
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.11.925'
+    implementation 'com.amazonaws:aws-java-sdk-sts:1.11.659'
+    // https://mvnrepository.com/artifact/com.google.apis/google-api-services-bigquery
+//    implementation group: 'com.google.apis', name: 'google-api-services-bigquery', version: 'v2-rev459-1.25.0'
+    implementation group: 'org.kitesdk', name: 'kite-data-core', version: '1.1.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.12.3'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.3'
+    implementation 'com.google.cloud:google-cloud-bigquery:1.128.1'
+    implementation 'com.google.cloud:google-cloud-storage:1.113.14'
+    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'com.google.inject:guice:5.0.1'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:9.2.1.jre11'
+    implementation 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
+    implementation 'com.sap.cloud.db.jdbc:ngdbc:2.5.49'
+    implementation 'com.typesafe:config:1.3.1'
+    implementation 'com.typesafe.akka:akka-actor_2.13:2.6.0-M7'
+    implementation 'commons-io:commons-io:2.4'
+    implementation('io.confluent:kafka-avro-serializer:3.2.1'){ exclude group: 'org.slf4j', module: 'slf4j-log4j12' }
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'mysql:mysql-connector-java:8.0.18'
+    implementation 'net.gpedro.integrations.slack:slack-webhook:1.4.0'
+    implementation 'org.apache.avro:avro:1.8.0'
+    implementation 'org.apache.commons:commons-csv:1.8'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation('org.apache.kafka:kafka-clients:5.4.4-ccs') { exclude group: 'org.lz4', module: 'lz4-java' }
+    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.12.0'
+    implementation 'org.json:json:20190722'
+    implementation 'org.postgresql:postgresql:42.2.8'
+    implementation 'org.slf4j:log4j-over-slf4j:1.7.30'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+    testImplementation 'com.google.cloud:google-cloud-nio:0.122.11'
+    testImplementation 'com.google.inject.extensions:guice-grapher:5.0.1'
+    testImplementation 'com.h2database:h2:1.4.200'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.0'
+    testImplementation 'io.findify:s3mock_2.13:0.2.6'
+    testImplementation 'org.bouncycastle:bcpkix-jdk15on:1.68'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.6.2'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+    testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+    testImplementation(platform('org.testcontainers:testcontainers-bom:1.15.3'))
+    testImplementation 'org.testcontainers:testcontainers:1.15.3'
+    testImplementation('org.testcontainers:elasticsearch')
+    testImplementation('org.testcontainers:kafka')
+    testImplementation "org.testcontainers:junit-jupiter:1.15.3"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.bayer.datahub.kafkaclientbuilder.Main'
+    }
+}
+
+System.setProperty( "project.dir", project.projectDir.toString() )
+
+artifacts {
+    archives shadowJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact shadowJar
+        }
+    }
+    repositories {
+        maven {
+            name = 'publishRepo'
+            credentials(PasswordCredentials)
+            def repoBaseUrl = 'https://artifactory.bayer.com/artifactory/'
+            url = version.endsWith('SNAPSHOT') ? repoBaseUrl + 'edh-maven-dev-datahub' : repoBaseUrl + 'shared-mvn-prod-shared'
+        }
+    }
+}
+
+release {
+    preTagCommitMessage = '[Gradle Release Plugin][skip ci] - pre tag commit: '
+    tagCommitMessage = '[Gradle Release Plugin][skip ci] - creating tag: '
+    newVersionCommitMessage = '[Gradle Release Plugin][skip ci] - new version commit: '
+    buildTasks = ['shadowJar']
+
+    git {
+        requireBranch = ''
+    }
+
+    afterReleaseBuild.dependsOn publish
+}
