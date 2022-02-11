@@ -1,0 +1,51 @@
+@startuml
+autonumber
+autoactivate on
+
+ClientManager -> S3Consumer: init()
+    S3Consumer -> FileConsumer: init()
+        FileConsumer -> BaseConsumer: init()
+            BaseConsumer -> KafkaConsumer **
+            BaseConsumer -> KafkaConsumer: subscribe()
+            BaseConsumer <-- KafkaConsumer
+        FileConsumer <-- BaseConsumer
+    S3Consumer <-- FileConsumer
+ClientManager <-- S3Consumer
+
+ClientManager -> S3Consumer: run()
+    S3Consumer -> FileConsumer: run()
+        FileConsumer -> BaseConsumer: run()
+            loop until topic end
+                BaseConsumer -> KafkaConsumer: consume()
+                BaseConsumer <-- KafkaConsumer: ConsumerRecords[]
+                alt guarantee == AT_LEAST_ONCE
+                    BaseConsumer -> BaseConsumer: processRecordsAtLeastOnce()
+                        BaseConsumer -> KafkaConsumer: commitSync()
+                        BaseConsumer <-- KafkaConsumer
+                    BaseConsumer <-- BaseConsumer
+                else guarantee == EXACTLY_ONCE
+                    BaseConsumer -> BaseConsumer: processRecordsExactlyOnce()
+                    loop each record
+                        BaseConsumer -> BaseConsumer: processRecordsAtLeastOnce()
+                            BaseConsumer -> KafkaConsumer: commitSync()
+                            BaseConsumer <-- KafkaConsumer
+                        BaseConsumer <-- BaseConsumer
+                    end
+                    BaseConsumer <-- BaseConsumer
+                end
+            end
+            BaseConsumer -> BaseConsumer: commitEnd()
+            BaseConsumer <-- BaseConsumer
+        FileConsumer <-- BaseConsumer
+    S3Consumer <-- FileConsumer
+ClientManager <-- S3Consumer
+
+ClientManager -> S3Consumer: stop()
+    S3Consumer -> FileConsumer: stop()
+        FileConsumer -> BaseConsumer: stop()
+            BaseConsumer -> KafkaConsumer !!: wakeup()
+        FileConsumer <-- BaseConsumer
+    S3Consumer <-- FileConsumer
+ClientManager <-- S3Consumer
+
+@enduml

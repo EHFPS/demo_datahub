@@ -1,0 +1,52 @@
+@startuml
+
+together {
+    interface KafkaClient {
+        init(): void
+        run(): void
+        stop(): void
+    }
+    interface Consumer
+    abstract class BaseConsumer {
+        processRecordsAtLeastOnce(): void
+        processRecordsExactlyOnce(): void
+        commit(): void
+        commitEnd(): void
+        convertConsumerRecordsToGenericRecords(): List<GenericRecord>
+        convertConsumerRecordToStringArray(): List<String>
+    }
+    class FileConsumer
+    class GcsConsumer
+    class S3Consumer
+    class AbsConsumer
+}
+together {
+    class Configs
+    class ConsumerFactory
+    class StatisticsAggregator
+    class StatisticsTimer
+    class ChunkService
+    class S3FileUploader
+    interface FileWriter
+}
+
+KafkaClient <|-- Consumer
+Consumer <|.. BaseConsumer
+BaseConsumer <|-- FileConsumer
+FileConsumer <|-- GcsConsumer
+FileConsumer <|-- S3Consumer
+FileConsumer <|-- AbsConsumer
+
+FileConsumer --> ConsumerFactory
+FileConsumer --> ChunkService
+FileConsumer --> StatisticsAggregator
+FileConsumer --> StatisticsTimer
+FileConsumer --> FileWriter
+FileConsumer --> Configs
+
+GcsConsumer --> Configs
+S3Consumer --> Configs
+S3Consumer --> S3FileUploader
+AbsConsumer --> Configs
+
+@enduml

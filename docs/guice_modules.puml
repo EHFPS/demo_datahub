@@ -1,0 +1,94 @@
+@startuml
+title Guice Modules
+
+class AppModule
+
+package services {
+    package common {
+        class CommonServicesModule
+        AppModule o-- CommonServicesModule
+        package date {
+            class DateServiceModule
+            CommonServicesModule o-- DateServiceModule
+        }
+        package memory {
+            class MemoryServiceModule
+            CommonServicesModule o-- MemoryServiceModule
+        }
+        package statistics {
+            class StatisticsModule
+            CommonServicesModule o-- StatisticsModule
+        }
+        package notifications {
+            class NotificationServiceModule
+            class ConsoleNotificationModule
+            class KafkaNotificationModule
+            CommonServicesModule o-- NotificationServiceModule
+            NotificationServiceModule o-- ConsoleNotificationModule
+            NotificationServiceModule o-- KafkaNotificationModule
+        }
+    }
+    package kafka {
+        class ProducerFactoryModule
+        class ConsumerFactoryModule
+        class SchemaRegistryServiceModule
+    }
+    package db {
+        class DbContextModule
+    }
+}
+
+package clients {
+    class ClientModule
+    AppModule o-- ClientModule
+
+    class DeltaDbProducerModule
+    ClientModule o-- DeltaDbProducerModule
+    DeltaDbProducerModule o-- SchemaRegistryServiceModule
+    DeltaDbProducerModule o-- DbContextModule
+    DeltaDbProducerModule o-- ProducerFactoryModule
+    DeltaDbProducerModule o-- ConsumerFactoryModule
+
+    class PlainDbProducerModule
+    ClientModule o-- PlainDbProducerModule
+    PlainDbProducerModule o-- DbContextModule
+    PlainDbProducerModule o-- SchemaRegistryServiceModule
+    PlainDbProducerModule o-- ProducerFactoryModule
+    PlainDbProducerModule o-- ConsumerFactoryModule
+
+    class ShareDocProducerModule
+    ClientModule o-- ShareDocProducerModule
+    ShareDocProducerModule o-- ProducerFactoryModule
+    ShareDocProducerModule o-- ConsumerFactoryModule
+
+    class CsvProducerModule
+    ClientModule o-- CsvProducerModule
+    CsvProducerModule o-- SchemaRegistryServiceModule
+    CsvProducerModule o-- ProducerFactoryModule
+
+    class S3ConsumerModule
+    ClientModule o-- S3ConsumerModule
+    S3ConsumerModule o-- ConsumerFactoryModule
+
+    class FileConsumerModule
+    ClientModule o-- FileConsumerModule
+    FileConsumerModule o-- ConsumerFactoryModule
+
+    class DbConsumerModule
+    ClientModule o-- DbConsumerModule
+    DbConsumerModule o-- DbContextModule
+    DbConsumerModule o-- ConsumerFactoryModule
+
+    class SplunkConsumerModule
+    ClientModule o-- SplunkConsumerModule
+    SplunkConsumerModule o-- ConsumerFactoryModule
+
+    class BigQueryConsumerModule
+    ClientModule o-- BigQueryConsumerModule
+    BigQueryConsumerModule o-- ConsumerFactoryModule
+
+    class BqSltConsumerModule
+    ClientModule o-- BqSltConsumerModule
+    BqSltConsumerModule o-- ConsumerFactoryModule
+}
+@enduml

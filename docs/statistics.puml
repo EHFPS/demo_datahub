@@ -1,0 +1,25 @@
+@startuml
+
+interface StatisticsProvider {
+    Statistics getIncrementStatistics()
+    Statistics getFinalStatistics()
+}
+interface Statistics
+interface StatisticsFormatter {
+    formatStatistics(Statistics)
+}
+interface KafkaClient
+
+StatisticsProvider <|-- KafkaClient
+
+class EmptyStatistics
+Statistics <|-- EmptyStatistics
+
+class PlainDbProducerStatistics
+class PlainDbProducerStatisticsFormatter
+Statistics <|-- PlainDbProducerStatistics
+StatisticsFormatter <|-- PlainDbProducerStatisticsFormatter
+
+
+
+@enduml

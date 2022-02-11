@@ -1,0 +1,26 @@
+@startuml
+
+allowmixing
+title Parsing configuration files
+
+file "config.properties" as PropertiesConfigFile
+file "config.yaml" as YamlConfigFile
+file LogFile
+file SystemProperties
+
+class Configs
+class ConfigToString
+class KafkaClient
+class ConfigsList
+class ConfigFileLoader
+
+SystemProperties --> ConfigFileLoader
+PropertiesConfigFile --> ConfigFileLoader
+YamlConfigFile --> ConfigFileLoader
+ConfigFileLoader --> ConfigsList
+ConfigsList "1" o-right- "*" Configs
+Configs --> KafkaClient
+Configs --> ConfigToString
+ConfigToString --> LogFile
+
+@enduml

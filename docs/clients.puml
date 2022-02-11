@@ -1,0 +1,39 @@
+@startuml
+
+interface KafkaClient {
+    init()
+    run()
+    stop()
+}
+
+interface Producer
+class PlainDbProducer
+class DeltaDbProducer
+class ShareDocProducer
+class CsvProducer
+
+interface Consumer
+class FileConsumer
+class CloudConsumer
+class BigQueryConsumer
+class BqSltConsumer
+class SplunkConsumer
+class DbConsumer
+class SingleSltCloudConsumer
+
+KafkaClient <|--  Producer
+Producer <|..  PlainDbProducer
+Producer <|..  DeltaDbProducer
+Producer <|..  ShareDocProducer
+Producer <|..  CsvProducer
+
+KafkaClient <|-- Consumer
+Consumer <|.. FileConsumer
+FileConsumer <|-- CloudConsumer
+Consumer <|.. BigQueryConsumer
+BigQueryConsumer <|-- BqSltConsumer
+Consumer <|.. SplunkConsumer
+Consumer <|.. DbConsumer
+Consumer <|.. SingleSltCloudConsumer
+
+@enduml

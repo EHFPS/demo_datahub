@@ -1,0 +1,24 @@
+@startuml
+title Configs class structure
+
+class Configs
+class KafkaConfig
+class KafkaProducerConfig
+class KafkaConsumerConfig
+class StatisticsConfig
+class NotificationConfig
+class ClientConfigList
+class ClientConfig
+class DbConfig
+
+Configs o-- KafkaConfig
+KafkaConfig o-- KafkaProducerConfig
+KafkaConfig o-- KafkaConsumerConfig
+
+Configs o-- StatisticsConfig
+Configs o-- NotificationConfig
+Configs o-- ClientConfigList
+
+ClientConfigList "1" o-- "*" ClientConfig
+ClientConfig "1" o-- "*" DbConfig
+@enduml

@@ -1,0 +1,43 @@
+########################################################
+#                                                      #
+# Example config for a producer that will continuously #
+# send records into Kafka from a table based on a      #
+# 'delta'. In this case we use a timestamp to ensure   #
+# we only get the newest records that were inserted.   #
+#                                                      #
+########################################################
+
+kafka.common.bootstrap.servers=
+kafka.common.avro.schema.registry=
+
+client.type=PRODUCER_DB_DELTA
+
+producer.topic=
+
+kafka.common.ssl.key.password=
+kafka.common.ssl.truststore.location=
+kafka.common.ssl.truststore.password=
+kafka.common.ssl.keystore.location=
+kafka.common.ssl.keystore.password=
+
+# One of: Hana, Postgres, MySQL, MSSQL, Teradata, Oracle
+db.type=
+
+db.username=
+db.password=
+db.host=
+db.port=
+db.table=
+db.name=
+db.schema=
+
+#name of the timestamp or date column
+producer.db.delta.column=
+#custom query if using one otherwise just omit this
+producer.db.delta.query=
+#optional timestamp to manually set the minimum to use for query
+producer.db.delta.min.override=
+#optional timestamp to manually set the maximum to use for qury
+producer.db.delta.max.override=
+#set how often the producer polls the table for new records (default is 60 seconds)
+producer.db.delta.poll.interval=

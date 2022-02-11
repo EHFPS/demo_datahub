@@ -1,0 +1,28 @@
+###############################################################
+#                                                             #
+# This is an example .properties file. These are the simplest #
+# configuration options for a kafka consumer that will read   #
+# from a topic and output the records to an avro or csv file  #
+#                                                             #
+###############################################################
+
+kafka.common.bootstrap.servers=
+kafka.common.avro.schema.registry=
+
+client.type=consumer
+kafka.consumer.group.id=
+topic=
+
+kafka.common.ssl.key.password=
+kafka.common.ssl.truststore.location=
+kafka.common.ssl.truststore.password=
+kafka.common.ssl.keystore.location=
+kafka.common.ssl.keystore.password=
+
+delimiter=
+
+# avro, csv, json
+output=
+
+# destination file
+file.path=

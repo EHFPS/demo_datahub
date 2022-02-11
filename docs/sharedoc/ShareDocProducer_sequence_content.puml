@@ -1,0 +1,28 @@
+@startuml
+
+title ShareDocProducer content workflow
+
+ClientManager -> ShareDocProducer: init()
+
+ClientManager -> ShareDocProducer: run()
+ShareDocProducer -> ShareDocService: loadMetadata()
+ShareDocProducer <-- ShareDocService: Metadata
+ShareDocProducer -> ShareDocService: findLastModifyDate()
+ShareDocProducer <-- ShareDocService: lastModifyDate
+alt Mode == METADATA
+    ShareDocProducer -> MetadataProcessor: loadAndProduceMetadata()
+else Mode == CONTENT
+    ShareDocProducer -> ContentProcessor: loadAndProduceContent()
+    ContentProcessor -> Authenticator: getJSessionId()
+    ContentProcessor <-- Authenticator: jSessionId
+    ContentProcessor -> HttpClient: sendAsync()
+        HttpClient -> ShareDocRestApi: GET
+        HttpClient <-- ShareDocRestApi
+    ContentProcessor <-- HttpClient: response
+    ContentProcessor -> ChunkService: split()
+    ContentProcessor <-- ChunkService
+end
+
+ClientManager -> ShareDocProducer: stop()
+
+@enduml

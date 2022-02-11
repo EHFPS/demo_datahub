@@ -1,0 +1,35 @@
+###################################################
+#                                                 #
+# Example config for a consumer that reads from a #
+# topic and loads the records into a database     #
+#                                                 #
+###################################################
+
+
+kafka.common.bootstrap.servers=
+kafka.common.avro.schema.registry=
+
+client.type=consumer
+kafka.consumer.group.id=
+topic=
+
+kafka.common.ssl.key.password=
+kafka.common.ssl.truststore.location=
+kafka.common.ssl.truststore.password=
+kafka.common.ssl.keystore.location=
+kafka.common.ssl.keystore.password=
+
+# One of: Hana, Postgres, MySQL, MSSQL, Teradata, Oracle
+db.type=
+
+db.username=
+db.password=
+db.host=
+db.table=
+db.name=
+
+# if applicable
+db.schema=
+
+# for oracle
+db.service.name=

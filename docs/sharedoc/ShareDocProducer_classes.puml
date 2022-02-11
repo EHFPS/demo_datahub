@@ -1,0 +1,46 @@
+@startuml
+
+class ClientManager
+class ShareDocProducer
+class ShareDocService
+class MetadataProcessor
+class ContentProcessor
+enum Mode {
+    METADATA
+    CONTENT
+}
+class StatisticsAggregator
+class ShareDocJsonService
+class ShareDocLatestKeyConsumer
+class Authenticator
+class FilenameGenerator
+class ProducerFactory
+package java {
+    class HttpClient
+}
+
+ClientManager --> ShareDocProducer
+
+ShareDocProducer --> ShareDocService
+ShareDocProducer --> MetadataProcessor
+ShareDocProducer --> ContentProcessor
+ShareDocProducer --> StatisticsAggregator
+
+ShareDocService --> ShareDocJsonService
+ShareDocService --> ShareDocLatestKeyConsumer
+ShareDocService --> Authenticator
+ShareDocService --> HttpClient
+
+MetadataProcessor --> FilenameGenerator
+MetadataProcessor --> ProducerFactory
+MetadataProcessor --> ShareDocJsonService
+MetadataProcessor --> StatisticsAggregator
+
+ContentProcessor --> Authenticator
+ContentProcessor --> HttpClient
+ContentProcessor --> FilenameGenerator
+ContentProcessor --> ProducerFactory
+ContentProcessor --> ChunkService
+ContentProcessor --> StatisticsAggregator
+
+@enduml

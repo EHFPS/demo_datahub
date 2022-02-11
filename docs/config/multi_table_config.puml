@@ -1,0 +1,25 @@
+@startuml
+title Configuration
+autonumber
+
+create Main
+
+create AppModule
+Main -> AppModule
+
+create Configs
+AppModule -> Configs
+
+create ClientManager
+AppModule -> ClientManager
+
+create KafkaClient
+AppModule -> KafkaClient
+
+Main -> ClientManager: run
+
+ClientManager -> KafkaClient: run
+ClientManager <-- KafkaClient
+Main <-- ClientManager
+
+@enduml

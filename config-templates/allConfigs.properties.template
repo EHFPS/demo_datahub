@@ -1,0 +1,142 @@
+###########################################################
+#                                                         #
+# Listed in this template are all of the possible configs #
+# and their default values (if there is one)              #
+#                                                         #
+###########################################################
+
+kafka.common.bootstrap.servers=
+kafka.common.avro.schema.registry=
+
+# Specifies the type of client for this connector. Valid values:
+# consumer - starts a kafka consumer with the associated configs
+# producer - starts a kafka producer with the associated configs
+# Note make sure the correct settings are configured based on the type
+# of client i.e. consumer configs should be filled out for conusmer, etc.
+client.type=
+
+# Client configurations. The values listed here are defaults - any
+# configurations ommitted from the file will just use the defaults
+
+# consumer configs
+kafka.consumer.group.id=s3-test
+kafka.consumer.auto.offset.reset=latest
+kafka.consumer.auto.offset.reset=300000
+kafka.consumer.max.poll.records=500
+kafka.consumer.enable.auto.commit=false
+kafka.consumer.max.partition.fetch.bytes=6194304
+kafka.consumer.fetch.max.wait.ms=1000
+
+# To assign a partition and offset to the consumer
+partition=
+offset=
+
+# producer configs 
+kafka.producer.acks=1
+kafka.producer.compression.type=none
+kafka.producer.batch.size=16384
+kafka.common.client.id=delta_test
+kafka.producer.linger.ms=5
+max.in.flight.requests=5
+kafka.producer.max.request.size=1048576
+kafka.producer.delivery.timeout.ms=120000
+kafka.common.request.timeout.ms=30000
+
+# Key to attach to producer records sent to the topic
+producer.db.plain.metadata.record.key=
+
+# How many records the producer should send at a time
+producer.db.delta.record.batch.send.size=1000
+
+# Serializer/Deserializers - avro or string (support for json planned in the future)
+kafka.producer.key.serializer=
+kafka.producer.value.serializer=
+kafka.consumer.key.deserializer=
+kafka.consumer.value.deserializer=
+
+# Configures the topic for a consumer to subscribe to
+topic=
+
+# Configures the topic for the producer to send records to
+producer.topic=
+
+kafka.common.ssl.key.password=
+kafka.common.ssl.truststore.location=
+kafka.common.ssl.truststore.password=
+kafka.common.ssl.keystore.location=
+kafka.common.ssl.keystore.password=
+
+# avro, csv, json
+output=
+
+# destination file
+file.path=
+
+#delimiter for csv files
+delimiter=
+
+# Hana, Postgres, MsSQL, Teradata, Oracle, MySql
+db.type=
+
+# db.upsert - true or false
+db.upsert=
+
+# primary key to update on - must be filled out for upserts
+db.primary.key=
+
+# database configs
+db.username=
+db.password=
+db.host=
+db.port=
+db.table=
+db.name=
+
+# Custom select query to use for loading records from database -
+# the default is just a select * from table
+query=
+
+# For oracle
+db.service.name=
+
+# if applicable
+db.schema=
+
+# For sending files to S3
+
+# The bucket + directory to send the files to
+s3Dir=
+
+# The file type (avro, csv)
+filePattern=
+
+# The directory to write files to before sending - files are
+# only temporarily stored here and are deleted after being sent
+# to S3
+workingDir=
+
+# Region that the bucket is in
+region=
+
+# Keys for an IAM user
+aws.access.key=
+aws.secret.key=
+
+# Configuration for range mechanism
+producer.db.plain.range.enable=false
+producer.db.plain.range.min=
+producer.db.plain.range.max=
+producer.db.plain.range.column=
+
+# Configuration for the 'delta producer' which loads records from
+# a database based on a timestamp or date delta i.e. CDC with Kafka
+
+# The column for a table
+producer.db.delta.column=
+
+# How often the producer will poll the database for new records
+producer.db.delta.poll.interval=60
+
+# Override for the min/max deltas. The default min (i.e. first run) is
+# 1900-01-01 00:00:00
+producer.db.delta.min.override=
