@@ -1,0 +1,67 @@
+---
+kafka:
+  common:
+    bootstrap.servers: kfk.awseuc1.tst.edh.cnb:9093
+    schema.registry.url: http://sr.awseuc1.tst.edh.cnb:8081
+    security.protocol: SSL
+    ssl.keystore.location: c:/jks/kafka_client_keystore.jks
+    ssl.keystore.password: THE_KEYSTORE_PASS
+    ssl.key.password: THE_KEY_PASS
+    ssl.truststore.location: c:/jks/kafka_client_truststore.jks
+    ssl.truststore.password: THE_TRUSTSTORE_PASS
+    request.timeout.ms: 30000
+  producer:
+    key.serializer: avro
+    value.serializer: string
+    acks: 1
+    linger.ms: 0
+    max.request.size: 1048576
+    max.in.flight.requests.per.connection: 5
+    delivery.timeout.ms: 120000
+  consumer:
+    key.deserializer: avro
+    value.deserializer: string
+    max.poll.interval.ms: 5000
+    group.id: regprem-dev
+    exit.on.finish: true
+    include.metadata: false
+statistics.intermediate.period.sec: 60
+notification:
+  kafka:
+    allowed.statistics.types.by.comma: INTERMEDIATE,FINAL
+    topic: kafka-notification-topic
+    bootstrap.servers: kafka-server:9093
+    truststore.location: c:/dir/truststore
+    truststore.password: tspass
+    keystore.location: c:/dir/keystore
+    keystore.password: kspass
+    key.password: keypass
+client:
+  type: consumer_s3
+  default:
+  configs:
+    - topic: the-topic
+      output.dir: c:/Temp
+      upload.empty.files: false
+      format:
+        type: avro
+        csv:
+          value.delimiter: ;
+          record.delimiter: CRLF
+          charset: Windows-1251
+          s3.key.name: the_folder/the_file.csv
+        avro.s3.key.name: the_folder/the_file.avro
+        binary.header.name: filename1
+      aws:
+        region: eu-central-2
+        service.endpoint: https://s3.eu-central-1.amazonaws.com
+        bucket.name: s3-consumer
+        auth:
+          type: BASIC
+          basic.access.key: the-access-key
+          basic.secret.key: the-secret-key
+          role.arn: the-arn
+          role.session: the-session
+      retry:
+        max.number: 6
+        wait.time.ms: 7000

@@ -1,0 +1,64 @@
+---
+kafka:
+  common:
+    bootstrap.servers: kfk.awseuc1.tst.edh.cnb:9093
+    schema.registry.url: http://sr.awseuc1.tst.edh.cnb:8081
+    security.protocol: SSL
+    ssl.keystore.location: c:/jks/kafka_client_keystore.jks
+    ssl.keystore.password: THE_KEYSTORE_PASS
+    ssl.key.password: THE_KEY_PASS
+    ssl.truststore.location: c:/jks/kafka_client_truststore.jks
+    ssl.truststore.password: THE_TRUSTSTORE_PASS
+    request.timeout.ms: 30000
+  producer:
+    key.serializer: avro
+    value.serializer: string
+    acks: 1
+    linger.ms: 0
+    max.request.size: 1048576
+    max.in.flight.requests.per.connection: 5
+    delivery.timeout.ms: 120000
+  consumer:
+    key.deserializer: avro
+    value.deserializer: string
+    max.poll.interval.ms: 5000
+    group.id: regprem-dev
+    exit.on.finish: true
+    include.metadata: false
+statistics.intermediate.period.sec: 60
+notification:
+  kafka:
+    allowed.statistics.types.by.comma: INTERMEDIATE,FINAL
+    topic: kafka-notification-topic
+    bootstrap.servers: kafka-server:9093
+    truststore.location: c:/dir/truststore
+    truststore.password: tspass
+    keystore.location: c:/dir/keystore
+    keystore.password: kspass
+    key.password: keypass
+client:
+  type: producer_db_delta
+  default:
+    poll.interval: 3600
+    db:
+      type: Oracle
+      upsert: true
+      username: THE_DB_USER
+      password: THE_DB_PASS
+      host: by0q9s.de.bayer.cnb
+      port: 1522
+      name: APS11R2B.LEV.DE.BAYER.CNB
+      schema: THE_DB_SCHEMA
+      fetch: 500
+      primary.key: PK
+      service.name: data
+  configs:
+    - topic: the-topic
+      db:
+        table: V_BCK_MD_RL_PL_ACTVE_SUBSTANCE
+      type: TIMESTAMP
+      column: CREATED
+      min.override: "'2019-01-01 00:00:00'"
+      max.override: "'2020-01-01 00:00:00'"
+      select.interval: 1d
+      query: SELECT * FROM THE_SCHEMA.THE_TABLE

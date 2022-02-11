@@ -1,0 +1,1372 @@
+{
+  "columns": [
+    {
+      "name": "r_folder_path",
+      "label": "Folder path"
+    },
+    {
+      "name": "r_object_id",
+      "label": "Object id"
+    },
+    {
+      "name": "object_name",
+      "label": "Object name"
+    },
+    {
+      "name": "r_object_type",
+      "label": "Object type"
+    },
+    {
+      "name": "title",
+      "label": "Title"
+    },
+    {
+      "name": "subject",
+      "label": "Subject"
+    },
+    {
+      "name": "authors",
+      "label": "Authors"
+    },
+    {
+      "name": "keywords",
+      "label": "Keywords"
+    },
+    {
+      "name": "a_application_type",
+      "label": "Application type"
+    },
+    {
+      "name": "a_status",
+      "label": "Status"
+    },
+    {
+      "name": "r_creation_date",
+      "label": "Creation date"
+    },
+    {
+      "name": "r_modify_date",
+      "label": "Modify date"
+    },
+    {
+      "name": "r_modifier",
+      "label": "Modifier"
+    },
+    {
+      "name": "r_access_date",
+      "label": "Access date"
+    },
+    {
+      "name": "a_is_hidden",
+      "label": "Is hidden"
+    },
+    {
+      "name": "i_is_deleted",
+      "label": "Is deleted"
+    },
+    {
+      "name": "a_retention_date",
+      "label": "Retention date"
+    },
+    {
+      "name": "a_archive",
+      "label": "Archive"
+    },
+    {
+      "name": "a_compound_architecture",
+      "label": "Compound architecture"
+    },
+    {
+      "name": "a_link_resolved",
+      "label": "Link resolved"
+    },
+    {
+      "name": "i_reference_cnt",
+      "label": "Reference cnt"
+    },
+    {
+      "name": "i_has_folder",
+      "label": "Has folder"
+    },
+    {
+      "name": "i_folder_id",
+      "label": "Folder id"
+    },
+    {
+      "name": "r_composite_id",
+      "label": "Composite id"
+    },
+    {
+      "name": "r_composite_label",
+      "label": "Composite label"
+    },
+    {
+      "name": "r_component_label",
+      "label": "Component label"
+    },
+    {
+      "name": "r_order_no",
+      "label": "Order no"
+    },
+    {
+      "name": "r_link_cnt",
+      "label": "Link cnt"
+    },
+    {
+      "name": "r_link_high_cnt",
+      "label": "Link high cnt"
+    },
+    {
+      "name": "r_assembled_from_id",
+      "label": "Assembled from id"
+    },
+    {
+      "name": "r_frzn_assembly_cnt",
+      "label": "Frzn assembly cnt"
+    },
+    {
+      "name": "r_has_frzn_assembly",
+      "label": "Has frzn assembly"
+    },
+    {
+      "name": "resolution_label",
+      "label": "Resolution label"
+    },
+    {
+      "name": "r_is_virtual_doc",
+      "label": "Is virtual doc"
+    },
+    {
+      "name": "i_contents_id",
+      "label": "Contents id"
+    },
+    {
+      "name": "a_content_type",
+      "label": "Content type"
+    },
+    {
+      "name": "r_page_cnt",
+      "label": "Page cnt"
+    },
+    {
+      "name": "r_content_size",
+      "label": "Content size"
+    },
+    {
+      "name": "a_full_text",
+      "label": "Full text"
+    },
+    {
+      "name": "a_storage_type",
+      "label": "Storage type"
+    },
+    {
+      "name": "i_cabinet_id",
+      "label": "Cabinet id"
+    },
+    {
+      "name": "owner_name",
+      "label": "Owner name"
+    },
+    {
+      "name": "owner_permit",
+      "label": "Owner permit"
+    },
+    {
+      "name": "group_name",
+      "label": "Group name"
+    },
+    {
+      "name": "group_permit",
+      "label": "Group permit"
+    },
+    {
+      "name": "world_permit",
+      "label": "World permit"
+    },
+    {
+      "name": "i_antecedent_id",
+      "label": "Antecedent id"
+    },
+    {
+      "name": "i_chronicle_id",
+      "label": "Chronicle id"
+    },
+    {
+      "name": "i_latest_flag",
+      "label": "Latest flag"
+    },
+    {
+      "name": "r_lock_owner",
+      "label": "Lock owner"
+    },
+    {
+      "name": "r_lock_date",
+      "label": "Lock date"
+    },
+    {
+      "name": "r_lock_machine",
+      "label": "Lock machine"
+    },
+    {
+      "name": "log_entry",
+      "label": "Log entry"
+    },
+    {
+      "name": "r_version_label",
+      "label": "Version label"
+    },
+    {
+      "name": "i_branch_cnt",
+      "label": "Branch cnt"
+    },
+    {
+      "name": "i_direct_dsc",
+      "label": "Direct dsc"
+    },
+    {
+      "name": "r_immutable_flag",
+      "label": "Immutable flag"
+    },
+    {
+      "name": "r_frozen_flag",
+      "label": "Frozen flag"
+    },
+    {
+      "name": "r_has_events",
+      "label": "Has events"
+    },
+    {
+      "name": "acl_domain",
+      "label": "Acl domain"
+    },
+    {
+      "name": "acl_name",
+      "label": "Acl name"
+    },
+    {
+      "name": "a_special_app",
+      "label": "Special app"
+    },
+    {
+      "name": "i_is_reference",
+      "label": "Is reference"
+    },
+    {
+      "name": "r_creator_name",
+      "label": "Creator name"
+    },
+    {
+      "name": "r_is_public",
+      "label": "Is public"
+    },
+    {
+      "name": "r_policy_id",
+      "label": "Policy id"
+    },
+    {
+      "name": "r_resume_state",
+      "label": "Resume state"
+    },
+    {
+      "name": "r_current_state",
+      "label": "Current state"
+    },
+    {
+      "name": "r_alias_set_id",
+      "label": "Alias set id"
+    },
+    {
+      "name": "a_effective_date",
+      "label": "Effective date"
+    },
+    {
+      "name": "a_expiration_date",
+      "label": "Expiration date"
+    },
+    {
+      "name": "a_publish_formats",
+      "label": "Publish formats"
+    },
+    {
+      "name": "a_effective_label",
+      "label": "Effective label"
+    },
+    {
+      "name": "a_effective_flag",
+      "label": "Effective flag"
+    },
+    {
+      "name": "a_category",
+      "label": "Category"
+    },
+    {
+      "name": "language_code",
+      "label": "Language code"
+    },
+    {
+      "name": "a_is_template",
+      "label": "Is template"
+    },
+    {
+      "name": "a_controlling_app",
+      "label": "Controlling app"
+    },
+    {
+      "name": "r_full_content_size",
+      "label": "Full content size"
+    },
+    {
+      "name": "a_extended_properties",
+      "label": "Extended properties"
+    },
+    {
+      "name": "a_is_signed",
+      "label": "Is signed"
+    },
+    {
+      "name": "a_last_review_date",
+      "label": "Last review date"
+    },
+    {
+      "name": "i_retain_until",
+      "label": "Retain until"
+    },
+    {
+      "name": "r_aspect_name",
+      "label": "Aspect name"
+    },
+    {
+      "name": "i_retainer_id",
+      "label": "Retainer id"
+    },
+    {
+      "name": "i_partition",
+      "label": "Partition"
+    },
+    {
+      "name": "i_is_replica",
+      "label": "Is replica"
+    },
+    {
+      "name": "i_vstamp",
+      "label": "Vstamp"
+    },
+    {
+      "name": "abstract",
+      "label": "Abstract"
+    },
+    {
+      "name": "archive_location",
+      "label": "Archive location"
+    },
+    {
+      "name": "archive_number",
+      "label": "Archive number"
+    },
+    {
+      "name": "artifact_storage_location",
+      "label": "Artifact storage location"
+    },
+    {
+      "name": "classification_artifact",
+      "label": "Classification artifact"
+    },
+    {
+      "name": "classification_domain",
+      "label": "Classification domain"
+    },
+    {
+      "name": "classification_group",
+      "label": "Classification group"
+    },
+    {
+      "name": "classification_subgroup",
+      "label": "Classification subgroup"
+    },
+    {
+      "name": "document_date",
+      "label": "Document date"
+    },
+    {
+      "name": "record_id",
+      "label": "Record id"
+    },
+    {
+      "name": "document_language",
+      "label": "Document language"
+    },
+    {
+      "name": "document_origin_site",
+      "label": "Document origin site"
+    },
+    {
+      "name": "document_owner",
+      "label": "Document owner"
+    },
+    {
+      "name": "document_version",
+      "label": "Document version"
+    },
+    {
+      "name": "dosage_form",
+      "label": "Dosage form"
+    },
+    {
+      "name": "formulation_number",
+      "label": "Formulation number"
+    },
+    {
+      "name": "full_title",
+      "label": "Full title"
+    },
+    {
+      "name": "health_authority",
+      "label": "Health authority"
+    },
+    {
+      "name": "indication",
+      "label": "Indication"
+    },
+    {
+      "name": "information_classification",
+      "label": "Information classification"
+    },
+    {
+      "name": "legacy_chronicle_id",
+      "label": "Legacy chronicle id"
+    },
+    {
+      "name": "legacy_creation_date",
+      "label": "Legacy creation date"
+    },
+    {
+      "name": "legacy_creator",
+      "label": "Legacy creator"
+    },
+    {
+      "name": "legacy_migration_history",
+      "label": "Legacy migration history"
+    },
+    {
+      "name": "legacy_modifier",
+      "label": "Legacy modifier"
+    },
+    {
+      "name": "legacy_modify_date",
+      "label": "Legacy modify date"
+    },
+    {
+      "name": "legacy_object_id",
+      "label": "Legacy object id"
+    },
+    {
+      "name": "legacy_object_type",
+      "label": "Legacy object type"
+    },
+    {
+      "name": "legacy_owner",
+      "label": "Legacy owner"
+    },
+    {
+      "name": "legacy_property_name",
+      "label": "Legacy property name"
+    },
+    {
+      "name": "legacy_property_value",
+      "label": "Legacy property value"
+    },
+    {
+      "name": "legacy_status",
+      "label": "Legacy status"
+    },
+    {
+      "name": "legacy_system",
+      "label": "Legacy system"
+    },
+    {
+      "name": "legacy_version_label",
+      "label": "Legacy version label"
+    },
+    {
+      "name": "legal_hold",
+      "label": "Legal hold"
+    },
+    {
+      "name": "literature_reference_list",
+      "label": "Literature reference list"
+    },
+    {
+      "name": "market",
+      "label": "Market"
+    },
+    {
+      "name": "material_number",
+      "label": "Material number"
+    },
+    {
+      "name": "organization",
+      "label": "Organization"
+    },
+    {
+      "name": "other_document_number",
+      "label": "Other document number"
+    },
+    {
+      "name": "other_report_numbers",
+      "label": "Other report numbers"
+    },
+    {
+      "name": "page_count",
+      "label": "Page count"
+    },
+    {
+      "name": "ppn",
+      "label": "Ppn"
+    },
+    {
+      "name": "ppnf",
+      "label": "Ppnf"
+    },
+    {
+      "name": "product_id",
+      "label": "Product id"
+    },
+    {
+      "name": "project_id",
+      "label": "Project id"
+    },
+    {
+      "name": "report_number",
+      "label": "Report number"
+    },
+    {
+      "name": "route_of_administration",
+      "label": "Route of administration"
+    },
+    {
+      "name": "security_domain",
+      "label": "Security domain"
+    },
+    {
+      "name": "status_last_updated",
+      "label": "Status last updated"
+    },
+    {
+      "name": "study_area",
+      "label": "Study area"
+    },
+    {
+      "name": "study_number",
+      "label": "Study number"
+    },
+    {
+      "name": "study_sub_area",
+      "label": "Study sub area"
+    },
+    {
+      "name": "test_substance",
+      "label": "Test substance"
+    },
+    {
+      "name": "type_of_document",
+      "label": "Type of document"
+    },
+    {
+      "name": "type_of_report",
+      "label": "Type of report"
+    },
+    {
+      "name": "used_in_submission",
+      "label": "Used in submission"
+    },
+    {
+      "name": "user_comments",
+      "label": "User comments"
+    },
+    {
+      "name": "publication_year",
+      "label": "Publication year"
+    },
+    {
+      "name": "adverse_event_id",
+      "label": "Adverse event id"
+    },
+    {
+      "name": "archiving_information",
+      "label": "Archiving information"
+    },
+    {
+      "name": "dispatch_date",
+      "label": "Dispatch date"
+    },
+    {
+      "name": "eudract_number",
+      "label": "Eudract number"
+    },
+    {
+      "name": "irb_iec_name",
+      "label": "Irb iec name"
+    },
+    {
+      "name": "other_study_number",
+      "label": "Other study number"
+    },
+    {
+      "name": "principal_investigator",
+      "label": "Principal investigator"
+    },
+    {
+      "name": "study_institution",
+      "label": "Study institution"
+    },
+    {
+      "name": "study_phase",
+      "label": "Study phase"
+    },
+    {
+      "name": "study_site_country",
+      "label": "Study site country"
+    },
+    {
+      "name": "study_site_identifier",
+      "label": "Study site identifier"
+    },
+    {
+      "name": "study_title",
+      "label": "Study title"
+    },
+    {
+      "name": "type_of_control",
+      "label": "Type of control"
+    },
+    {
+      "name": "type_of_study",
+      "label": "Type of study"
+    },
+    {
+      "name": "effective_date",
+      "label": "Effective date"
+    },
+    {
+      "name": "ib_version",
+      "label": "Ib version"
+    },
+    {
+      "name": "review_date",
+      "label": "Review date"
+    },
+    {
+      "name": "validity_end_date",
+      "label": "Validity end date"
+    },
+    {
+      "name": "document_base_number",
+      "label": "Document base number"
+    },
+    {
+      "name": "document_extension_number",
+      "label": "Document extension number"
+    },
+    {
+      "name": "species",
+      "label": "Species"
+    },
+    {
+      "name": "study_standard",
+      "label": "Study standard"
+    },
+    {
+      "name": "submission_comments",
+      "label": "Submission comments"
+    },
+    {
+      "name": "submission_readiness",
+      "label": "Submission readiness"
+    },
+    {
+      "name": "application_id",
+      "label": "Application id"
+    },
+    {
+      "name": "application_type",
+      "label": "Application type"
+    },
+    {
+      "name": "brain_event_code",
+      "label": "Brain event code"
+    },
+    {
+      "name": "dosage_strength",
+      "label": "Dosage strength"
+    },
+    {
+      "name": "manufacturing_site",
+      "label": "Manufacturing site"
+    },
+    {
+      "name": "procedure_number",
+      "label": "Procedure number"
+    },
+    {
+      "name": "region",
+      "label": "Region"
+    },
+    {
+      "name": "submission_id",
+      "label": "Submission id"
+    },
+    {
+      "name": "trade_name",
+      "label": "Trade name"
+    },
+    {
+      "name": "type_of_agency_meeting",
+      "label": "Type of agency meeting"
+    },
+    {
+      "name": "type_of_procedure",
+      "label": "Type of procedure"
+    },
+    {
+      "name": "type_of_submission",
+      "label": "Type of submission"
+    },
+    {
+      "name": "archive_comments",
+      "label": "Archive comments"
+    },
+    {
+      "name": "archive_status",
+      "label": "Archive status"
+    },
+    {
+      "name": "authority_registration",
+      "label": "Authority registration"
+    },
+    {
+      "name": "event_description",
+      "label": "Event description"
+    },
+    {
+      "name": "generic_name_inn",
+      "label": "Generic name inn"
+    },
+    {
+      "name": "originator_country",
+      "label": "Originator country"
+    },
+    {
+      "name": "originator_name",
+      "label": "Originator name"
+    },
+    {
+      "name": "originator_organization",
+      "label": "Originator organization"
+    },
+    {
+      "name": "recipient_country",
+      "label": "Recipient country"
+    },
+    {
+      "name": "recipient_name",
+      "label": "Recipient name"
+    },
+    {
+      "name": "recipient_organization",
+      "label": "Recipient organization"
+    },
+    {
+      "name": "regulatory_activity_date",
+      "label": "Regulatory activity date"
+    },
+    {
+      "name": "transfer_media",
+      "label": "Transfer media"
+    },
+    {
+      "name": "business_area",
+      "label": "Business area"
+    },
+    {
+      "name": "dispatch_to",
+      "label": "Dispatch to"
+    },
+    {
+      "name": "drug_substance_name",
+      "label": "Drug substance name"
+    },
+    {
+      "name": "label_id",
+      "label": "Label id"
+    },
+    {
+      "name": "label_sys",
+      "label": "Label sys"
+    },
+    {
+      "name": "label_version",
+      "label": "Label version"
+    },
+    {
+      "name": "labeling_status",
+      "label": "Labeling status"
+    },
+    {
+      "name": "labeling_status_date",
+      "label": "Labeling status date"
+    },
+    {
+      "name": "labeling_version",
+      "label": "Labeling version"
+    },
+    {
+      "name": "argus_case_number",
+      "label": "Argus case number"
+    },
+    {
+      "name": "period_end_date",
+      "label": "Period end date"
+    },
+    {
+      "name": "period_start_date",
+      "label": "Period start date"
+    },
+    {
+      "name": "company_name",
+      "label": "Company name"
+    },
+    {
+      "name": "document_category",
+      "label": "Document category"
+    },
+    {
+      "name": "document_subcategory",
+      "label": "Document subcategory"
+    },
+    {
+      "name": "journal_name",
+      "label": "Journal name"
+    },
+    {
+      "name": "reported_year",
+      "label": "Reported year"
+    },
+    {
+      "name": "license",
+      "label": "License"
+    },
+    {
+      "name": "publisher_name",
+      "label": "Publisher name"
+    },
+    {
+      "name": "series_title",
+      "label": "Series title"
+    },
+    {
+      "name": "archive_date",
+      "label": "Archive date"
+    },
+    {
+      "name": "chemist_code",
+      "label": "Chemist code"
+    },
+    {
+      "name": "corporate_source",
+      "label": "Corporate source"
+    },
+    {
+      "name": "start_of_first_experiment",
+      "label": "Start of first experiment"
+    },
+    {
+      "name": "start_of_last_experiment",
+      "label": "Start of last experiment"
+    },
+    {
+      "name": "user_id",
+      "label": "User id"
+    },
+    {
+      "name": "enforce_esignature",
+      "label": "Enforce esignature"
+    },
+    {
+      "name": "enforce_formal_review",
+      "label": "Enforce formal review"
+    },
+    {
+      "name": "document_status",
+      "label": "Document status"
+    },
+    {
+      "name": "tbo_calc_domain_abbrev",
+      "label": "Tbo calc domain abbrev"
+    },
+    {
+      "name": "tbo_calc_org_abbrev",
+      "label": "Tbo calc org abbrev"
+    },
+    {
+      "name": "sharepoint_locked",
+      "label": "Sharepoint locked"
+    },
+    {
+      "name": "in_vd_workflow",
+      "label": "In vd workflow"
+    },
+    {
+      "name": "import_as_major",
+      "label": "Import as major"
+    },
+    {
+      "name": "original_creation_date",
+      "label": "Original creation date"
+    },
+    {
+      "name": "import_filename",
+      "label": "Import filename"
+    }
+  ],
+  "rows": [
+    {
+      "@class": "model",
+      "modifiedProperties": [],
+      "properties": {
+        "a_application_type": "",
+        "a_archive": 0,
+        "a_category": "",
+        "a_compound_architecture": "",
+        "a_content_type": "pdf",
+        "a_controlling_app": "",
+        "a_effective_flag": "",
+        "a_effective_label": "",
+        "a_extended_properties": "",
+        "a_full_text": 1,
+        "a_is_hidden": 0,
+        "a_is_signed": 0,
+        "a_is_template": 0,
+        "a_link_resolved": 0,
+        "a_publish_formats": "",
+        "a_special_app": "",
+        "a_status": "",
+        "a_storage_type": "filestore_01",
+        "abstract": "",
+        "acl_domain": "mzfbt",
+        "acl_name": "hu_ph_nonclin_appr",
+        "adverse_event_id": "",
+        "application_id": "",
+        "application_type": "",
+        "archive_comments": "",
+        "archive_location": "",
+        "archive_number": "",
+        "archive_status": "",
+        "archiving_information": "",
+        "argus_case_number": "",
+        "artifact_storage_location": "Archiv der GLP-Prufeinrichtung Early Development Bayer",
+        "authority_registration": "",
+        "authors": "Kai Herrmann (imkhr)",
+        "brain_event_code": "",
+        "business_area": "",
+        "chemist_code": "",
+        "classification_artifact": "",
+        "classification_domain": "Nonclinical",
+        "classification_group": "Study Report Complete",
+        "classification_subgroup": "Internal",
+        "company_name": "",
+        "corporate_source": "",
+        "dispatch_to": "",
+        "document_base_number": "",
+        "document_category": "",
+        "document_extension_number": 0,
+        "document_language": "English",
+        "document_origin_site": "",
+        "document_owner": "",
+        "document_status": "Approved",
+        "document_subcategory": "",
+        "document_version": "",
+        "dosage_form": "",
+        "dosage_strength": "",
+        "drug_substance_name": "",
+        "enforce_esignature": 0,
+        "enforce_formal_review": 0,
+        "eudract_number": "",
+        "event_description": "",
+        "formulation_number": "",
+        "full_title": "Repeated Dose Systemic Toxicity Study in Mice (4-Weeks Daily Administration by Gavage Followed by a 4-Weeks Recovery Period)",
+        "generic_name_inn": "",
+        "group_name": "cara3_domain",
+        "group_permit": 1,
+        "health_authority": "",
+        "i_antecedent_id": "090192f28025346f",
+        "i_branch_cnt": 0,
+        "i_cabinet_id": "0c0192f2800b1ab8",
+        "i_chronicle_id": "090192f28025346f",
+        "i_contents_id": "060192f2802916fa",
+        "i_direct_dsc": 0,
+        "i_folder_id": "0b0192f2802534c8",
+        "i_has_folder": 1,
+        "i_is_deleted": 0,
+        "i_is_reference": 0,
+        "i_is_replica": 0,
+        "i_latest_flag": 1,
+        "i_partition": 0,
+        "i_reference_cnt": 1,
+        "i_retainer_id": "",
+        "i_vstamp": 8,
+        "ib_version": "",
+        "import_as_major": 0,
+        "import_filename": "",
+        "in_vd_workflow": 0,
+        "indication": "",
+        "information_classification": "Restricted",
+        "irb_iec_name": "",
+        "journal_name": "",
+        "keywords": "",
+        "label_id": "",
+        "label_sys": 0,
+        "label_version": "",
+        "labeling_status": "",
+        "labeling_version": "",
+        "language_code": "",
+        "legacy_chronicle_id": "0000000000000000",
+        "legacy_creator": "",
+        "legacy_migration_history": "",
+        "legacy_modifier": "",
+        "legacy_object_id": "0000000000000000",
+        "legacy_object_type": "",
+        "legacy_owner": "",
+        "legacy_property_name": "",
+        "legacy_property_value": "",
+        "legacy_status": "",
+        "legacy_system": "",
+        "legacy_version_label": "",
+        "legal_hold": 0,
+        "license": "",
+        "literature_reference_list": "",
+        "log_entry": "",
+        "manufacturing_site": "",
+        "market": "",
+        "material_number": "",
+        "object_name": "NSR_T103130-8_PH-39814",
+        "organization": "Pharma",
+        "original_creation_date": "2020-09-21T08:11:53Z",
+        "originator_country": "",
+        "originator_name": "",
+        "originator_organization": "",
+        "other_document_number": "",
+        "other_report_numbers": "",
+        "other_study_number": "",
+        "owner_name": "mzfbt",
+        "owner_permit": 1,
+        "page_count": 0,
+        "ppn": "",
+        "ppnf": "",
+        "principal_investigator": "",
+        "procedure_number": "",
+        "product_id": "47d123fc-1070-4bfd-9d9e-dd8202aac76c",
+        "project_id": "",
+        "publication_year": 0,
+        "publisher_name": "",
+        "r_access_date": "2020-10-01T09:27:08Z",
+        "r_alias_set_id": "0000000000000000",
+        "r_aspect_name": "",
+        "r_assembled_from_id": "0000000000000000",
+        "r_component_label": "",
+        "r_composite_id": "",
+        "r_composite_label": "",
+        "r_content_size": 9050047,
+        "r_creation_date": "2020-09-21T08:11:55Z",
+        "r_creator_name": "dmadmin",
+        "r_current_state": 7,
+        "r_folder_path": "/By Product/B/BAY 2402234/Nonclinical/Toxicology/Repeat Dose Toxicity/T103130-8/Study Report Complete",
+        "r_frozen_flag": 0,
+        "r_frzn_assembly_cnt": 0,
+        "r_full_content_size": 9050047.0,
+        "r_has_events": 0,
+        "r_has_frzn_assembly": 0,
+        "r_immutable_flag": 0,
+        "r_is_public": 0,
+        "r_is_virtual_doc": 0,
+        "r_link_cnt": 0,
+        "r_link_high_cnt": 0,
+        "r_lock_machine": "",
+        "r_lock_owner": "",
+        "r_modifier": "dmadmin",
+        "r_modify_date": "2020-09-21T08:11:59Z",
+        "r_object_id": "090192f2802548b4",
+        "r_object_type": "sd_document",
+        "r_order_no": 0,
+        "r_page_cnt": 1,
+        "r_policy_id": "460192f28009099a",
+        "r_resume_state": -1,
+        "r_version_label": "1.0",
+        "recipient_country": "",
+        "recipient_name": "",
+        "recipient_organization": "",
+        "record_id": "10bfe123-244e-4090-945c-32a398181ae8",
+        "region": "",
+        "report_number": "PH-39814",
+        "reported_year": 0,
+        "resolution_label": "",
+        "route_of_administration": "Intragastric",
+        "security_domain": "Human Document",
+        "series_title": "",
+        "sharepoint_locked": 0,
+        "species": "Mouse",
+        "status_last_updated": "2020-09-21T08:11:58Z",
+        "study_area": "Toxicology",
+        "study_institution": "",
+        "study_number": "T103130-8",
+        "study_phase": "",
+        "study_site_country": "",
+        "study_site_identifier": "",
+        "study_standard": "",
+        "study_sub_area": "Repeat Dose Toxicity",
+        "study_title": "",
+        "subject": "",
+        "submission_comments": "",
+        "submission_id": "",
+        "submission_readiness": "",
+        "tbo_calc_domain_abbrev": "",
+        "tbo_calc_org_abbrev": "",
+        "test_substance": "",
+        "title": "",
+        "trade_name": "",
+        "transfer_media": "",
+        "type_of_agency_meeting": "",
+        "type_of_control": "",
+        "type_of_document": "",
+        "type_of_procedure": "",
+        "type_of_report": "",
+        "type_of_study": "",
+        "type_of_submission": "",
+        "used_in_submission": 0,
+        "user_comments": "",
+        "user_id": "",
+        "world_permit": 1
+      }
+    },
+    {
+      "@class": "model",
+      "modifiedProperties": [],
+      "properties": {
+        "a_application_type": "",
+        "a_archive": 0,
+        "a_category": "",
+        "a_compound_architecture": "",
+        "a_content_type": "pdf",
+        "a_controlling_app": "",
+        "a_effective_flag": "",
+        "a_effective_label": "",
+        "a_extended_properties": "",
+        "a_full_text": 1,
+        "a_is_hidden": 0,
+        "a_is_signed": 0,
+        "a_is_template": 0,
+        "a_link_resolved": 0,
+        "a_publish_formats": "",
+        "a_special_app": "",
+        "a_status": "",
+        "a_storage_type": "filestore_01",
+        "abstract": "",
+        "acl_domain": "mzfbt",
+        "acl_name": "hu_ph_nonclin_appr",
+        "adverse_event_id": "",
+        "application_id": "",
+        "application_type": "",
+        "archive_comments": "",
+        "archive_location": "",
+        "archive_number": "",
+        "archive_status": "",
+        "archiving_information": "",
+        "argus_case_number": "",
+        "artifact_storage_location": "Archiv der GLP-Prufeinrichtung EDB",
+        "authority_registration": "",
+        "authors": "Kai Herrmann (imkhr)",
+        "brain_event_code": "",
+        "business_area": "",
+        "chemist_code": "",
+        "classification_artifact": "",
+        "classification_domain": "Nonclinical",
+        "classification_group": "Study Report Complete",
+        "classification_subgroup": "Internal",
+        "company_name": "",
+        "corporate_source": "",
+        "dispatch_to": "",
+        "document_base_number": "",
+        "document_category": "",
+        "document_extension_number": 0,
+        "document_language": "English",
+        "document_origin_site": "",
+        "document_owner": "",
+        "document_status": "Approved",
+        "document_subcategory": "",
+        "document_version": "",
+        "dosage_form": "",
+        "dosage_strength": "",
+        "drug_substance_name": "",
+        "enforce_esignature": 0,
+        "enforce_formal_review": 0,
+        "eudract_number": "",
+        "event_description": "",
+        "formulation_number": "",
+        "full_title": "Repeated Dose Systemic Toxicity Study in Wistar Rats (4-Weeks Daily Administration by Gavage)",
+        "generic_name_inn": "",
+        "group_name": "cara3_domain",
+        "group_permit": 1,
+        "health_authority": "",
+        "i_antecedent_id": "090192f28025346e",
+        "i_branch_cnt": 0,
+        "i_cabinet_id": "0c0192f2800b1ab8",
+        "i_chronicle_id": "090192f28025346e",
+        "i_contents_id": "060192f2802916f9",
+        "i_direct_dsc": 0,
+        "i_folder_id": "0b0192f2802534c6",
+        "i_has_folder": 1,
+        "i_is_deleted": 0,
+        "i_is_reference": 0,
+        "i_is_replica": 0,
+        "i_latest_flag": 1,
+        "i_partition": 0,
+        "i_reference_cnt": 1,
+        "i_retainer_id": "",
+        "i_vstamp": 8,
+        "ib_version": "",
+        "import_as_major": 0,
+        "import_filename": "",
+        "in_vd_workflow": 0,
+        "indication": "",
+        "information_classification": "Restricted",
+        "irb_iec_name": "",
+        "journal_name": "",
+        "keywords": "",
+        "label_id": "",
+        "label_sys": 0,
+        "label_version": "",
+        "labeling_status": "",
+        "labeling_version": "",
+        "language_code": "",
+        "legacy_chronicle_id": "0000000000000000",
+        "legacy_creator": "",
+        "legacy_migration_history": "",
+        "legacy_modifier": "",
+        "legacy_object_id": "0000000000000000",
+        "legacy_object_type": "",
+        "legacy_owner": "",
+        "legacy_property_name": "",
+        "legacy_property_value": "",
+        "legacy_status": "",
+        "legacy_system": "",
+        "legacy_version_label": "",
+        "legal_hold": 0,
+        "license": "",
+        "literature_reference_list": "",
+        "log_entry": "",
+        "manufacturing_site": "",
+        "market": "",
+        "material_number": "",
+        "object_name": "NSR_T103112-8_PH-39817",
+        "organization": "Pharma",
+        "original_creation_date": "2020-09-21T08:08:23Z",
+        "originator_country": "",
+        "originator_name": "",
+        "originator_organization": "",
+        "other_document_number": "",
+        "other_report_numbers": "",
+        "other_study_number": "",
+        "owner_name": "mzfbt",
+        "owner_permit": 1,
+        "page_count": 0,
+        "ppn": "",
+        "ppnf": "",
+        "principal_investigator": "",
+        "procedure_number": "",
+        "product_id": "ce2faf8d-4789-4481-b4f9-60320dd4d451",
+        "project_id": "",
+        "publication_year": 0,
+        "publisher_name": "",
+        "r_access_date": "2020-10-01T07:53:05Z",
+        "r_alias_set_id": "0000000000000000",
+        "r_aspect_name": "",
+        "r_assembled_from_id": "0000000000000000",
+        "r_component_label": "",
+        "r_composite_id": "",
+        "r_composite_label": "",
+        "r_content_size": 11220966,
+        "r_creation_date": "2020-09-21T08:08:31Z",
+        "r_creator_name": "dmadmin",
+        "r_current_state": 7,
+        "r_folder_path": "/By Product/R/Runcaciguat BAY 1101042/Nonclinical/Toxicology/Repeat Dose Toxicity/T103112-8/Study Report Complete",
+        "r_frozen_flag": 0,
+        "r_frzn_assembly_cnt": 0,
+        "r_full_content_size": 1.1220966E7,
+        "r_has_events": 0,
+        "r_has_frzn_assembly": 0,
+        "r_immutable_flag": 0,
+        "r_is_public": 0,
+        "r_is_virtual_doc": 0,
+        "r_link_cnt": 0,
+        "r_link_high_cnt": 0,
+        "r_lock_machine": "",
+        "r_lock_owner": "",
+        "r_modifier": "dmadmin",
+        "r_modify_date": "2020-09-21T08:08:37Z",
+        "r_object_id": "090192f28025489d",
+        "r_object_type": "sd_document",
+        "r_order_no": 0,
+        "r_page_cnt": 1,
+        "r_policy_id": "460192f28009099a",
+        "r_resume_state": -1,
+        "r_version_label": "1.0",
+        "recipient_country": "",
+        "recipient_name": "",
+        "recipient_organization": "",
+        "record_id": "430894a7-bf4a-4e32-9199-7e09477e1e36",
+        "region": "",
+        "report_number": "PH-39817",
+        "reported_year": 0,
+        "resolution_label": "",
+        "route_of_administration": "Intragastric",
+        "security_domain": "Human Document",
+        "series_title": "",
+        "sharepoint_locked": 0,
+        "species": "Rat",
+        "status_last_updated": "2020-09-21T08:08:36Z",
+        "study_area": "Toxicology",
+        "study_institution": "",
+        "study_number": "T103112-8",
+        "study_phase": "",
+        "study_site_country": "",
+        "study_site_identifier": "",
+        "study_standard": "",
+        "study_sub_area": "Repeat Dose Toxicity",
+        "study_title": "",
+        "subject": "",
+        "submission_comments": "",
+        "submission_id": "",
+        "submission_readiness": "",
+        "tbo_calc_domain_abbrev": "",
+        "tbo_calc_org_abbrev": "",
+        "test_substance": "",
+        "title": "",
+        "trade_name": "",
+        "transfer_media": "",
+        "type_of_agency_meeting": "",
+        "type_of_control": "",
+        "type_of_document": "",
+        "type_of_procedure": "",
+        "type_of_report": "",
+        "type_of_study": "",
+        "type_of_submission": "",
+        "used_in_submission": 0,
+        "user_comments": "BAY 1149657and BAY 1007316 are human specific metabolites of BAY 1101042. BAY 1149657 the hydrochloride (BAY 2304896) was used within this study.",
+        "user_id": "",
+        "world_permit": 1
+      }
+    }
+  ],
+  "offset": 0,
+  "totalLength": 2
+}

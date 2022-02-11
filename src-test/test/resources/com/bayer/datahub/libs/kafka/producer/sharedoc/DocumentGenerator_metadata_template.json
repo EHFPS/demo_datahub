@@ -1,0 +1,935 @@
+{
+  "columns": [
+    {
+      "name": "r_folder_path",
+      "label": "Folder path"
+    },
+    {
+      "name": "r_object_id",
+      "label": "Object id"
+    },
+    {
+      "name": "object_name",
+      "label": "Object name"
+    },
+    {
+      "name": "r_object_type",
+      "label": "Object type"
+    },
+    {
+      "name": "title",
+      "label": "Title"
+    },
+    {
+      "name": "subject",
+      "label": "Subject"
+    },
+    {
+      "name": "authors",
+      "label": "Authors"
+    },
+    {
+      "name": "keywords",
+      "label": "Keywords"
+    },
+    {
+      "name": "a_application_type",
+      "label": "Application type"
+    },
+    {
+      "name": "a_status",
+      "label": "Status"
+    },
+    {
+      "name": "r_creation_date",
+      "label": "Creation date"
+    },
+    {
+      "name": "r_modify_date",
+      "label": "Modify date"
+    },
+    {
+      "name": "r_modifier",
+      "label": "Modifier"
+    },
+    {
+      "name": "r_access_date",
+      "label": "Access date"
+    },
+    {
+      "name": "a_is_hidden",
+      "label": "Is hidden"
+    },
+    {
+      "name": "i_is_deleted",
+      "label": "Is deleted"
+    },
+    {
+      "name": "a_retention_date",
+      "label": "Retention date"
+    },
+    {
+      "name": "a_archive",
+      "label": "Archive"
+    },
+    {
+      "name": "a_compound_architecture",
+      "label": "Compound architecture"
+    },
+    {
+      "name": "a_link_resolved",
+      "label": "Link resolved"
+    },
+    {
+      "name": "i_reference_cnt",
+      "label": "Reference cnt"
+    },
+    {
+      "name": "i_has_folder",
+      "label": "Has folder"
+    },
+    {
+      "name": "i_folder_id",
+      "label": "Folder id"
+    },
+    {
+      "name": "r_composite_id",
+      "label": "Composite id"
+    },
+    {
+      "name": "r_composite_label",
+      "label": "Composite label"
+    },
+    {
+      "name": "r_component_label",
+      "label": "Component label"
+    },
+    {
+      "name": "r_order_no",
+      "label": "Order no"
+    },
+    {
+      "name": "r_link_cnt",
+      "label": "Link cnt"
+    },
+    {
+      "name": "r_link_high_cnt",
+      "label": "Link high cnt"
+    },
+    {
+      "name": "r_assembled_from_id",
+      "label": "Assembled from id"
+    },
+    {
+      "name": "r_frzn_assembly_cnt",
+      "label": "Frzn assembly cnt"
+    },
+    {
+      "name": "r_has_frzn_assembly",
+      "label": "Has frzn assembly"
+    },
+    {
+      "name": "resolution_label",
+      "label": "Resolution label"
+    },
+    {
+      "name": "r_is_virtual_doc",
+      "label": "Is virtual doc"
+    },
+    {
+      "name": "i_contents_id",
+      "label": "Contents id"
+    },
+    {
+      "name": "a_content_type",
+      "label": "Content type"
+    },
+    {
+      "name": "r_page_cnt",
+      "label": "Page cnt"
+    },
+    {
+      "name": "r_content_size",
+      "label": "Content size"
+    },
+    {
+      "name": "a_full_text",
+      "label": "Full text"
+    },
+    {
+      "name": "a_storage_type",
+      "label": "Storage type"
+    },
+    {
+      "name": "i_cabinet_id",
+      "label": "Cabinet id"
+    },
+    {
+      "name": "owner_name",
+      "label": "Owner name"
+    },
+    {
+      "name": "owner_permit",
+      "label": "Owner permit"
+    },
+    {
+      "name": "group_name",
+      "label": "Group name"
+    },
+    {
+      "name": "group_permit",
+      "label": "Group permit"
+    },
+    {
+      "name": "world_permit",
+      "label": "World permit"
+    },
+    {
+      "name": "i_antecedent_id",
+      "label": "Antecedent id"
+    },
+    {
+      "name": "i_chronicle_id",
+      "label": "Chronicle id"
+    },
+    {
+      "name": "i_latest_flag",
+      "label": "Latest flag"
+    },
+    {
+      "name": "r_lock_owner",
+      "label": "Lock owner"
+    },
+    {
+      "name": "r_lock_date",
+      "label": "Lock date"
+    },
+    {
+      "name": "r_lock_machine",
+      "label": "Lock machine"
+    },
+    {
+      "name": "log_entry",
+      "label": "Log entry"
+    },
+    {
+      "name": "r_version_label",
+      "label": "Version label"
+    },
+    {
+      "name": "i_branch_cnt",
+      "label": "Branch cnt"
+    },
+    {
+      "name": "i_direct_dsc",
+      "label": "Direct dsc"
+    },
+    {
+      "name": "r_immutable_flag",
+      "label": "Immutable flag"
+    },
+    {
+      "name": "r_frozen_flag",
+      "label": "Frozen flag"
+    },
+    {
+      "name": "r_has_events",
+      "label": "Has events"
+    },
+    {
+      "name": "acl_domain",
+      "label": "Acl domain"
+    },
+    {
+      "name": "acl_name",
+      "label": "Acl name"
+    },
+    {
+      "name": "a_special_app",
+      "label": "Special app"
+    },
+    {
+      "name": "i_is_reference",
+      "label": "Is reference"
+    },
+    {
+      "name": "r_creator_name",
+      "label": "Creator name"
+    },
+    {
+      "name": "r_is_public",
+      "label": "Is public"
+    },
+    {
+      "name": "r_policy_id",
+      "label": "Policy id"
+    },
+    {
+      "name": "r_resume_state",
+      "label": "Resume state"
+    },
+    {
+      "name": "r_current_state",
+      "label": "Current state"
+    },
+    {
+      "name": "r_alias_set_id",
+      "label": "Alias set id"
+    },
+    {
+      "name": "a_effective_date",
+      "label": "Effective date"
+    },
+    {
+      "name": "a_expiration_date",
+      "label": "Expiration date"
+    },
+    {
+      "name": "a_publish_formats",
+      "label": "Publish formats"
+    },
+    {
+      "name": "a_effective_label",
+      "label": "Effective label"
+    },
+    {
+      "name": "a_effective_flag",
+      "label": "Effective flag"
+    },
+    {
+      "name": "a_category",
+      "label": "Category"
+    },
+    {
+      "name": "language_code",
+      "label": "Language code"
+    },
+    {
+      "name": "a_is_template",
+      "label": "Is template"
+    },
+    {
+      "name": "a_controlling_app",
+      "label": "Controlling app"
+    },
+    {
+      "name": "r_full_content_size",
+      "label": "Full content size"
+    },
+    {
+      "name": "a_extended_properties",
+      "label": "Extended properties"
+    },
+    {
+      "name": "a_is_signed",
+      "label": "Is signed"
+    },
+    {
+      "name": "a_last_review_date",
+      "label": "Last review date"
+    },
+    {
+      "name": "i_retain_until",
+      "label": "Retain until"
+    },
+    {
+      "name": "r_aspect_name",
+      "label": "Aspect name"
+    },
+    {
+      "name": "i_retainer_id",
+      "label": "Retainer id"
+    },
+    {
+      "name": "i_partition",
+      "label": "Partition"
+    },
+    {
+      "name": "i_is_replica",
+      "label": "Is replica"
+    },
+    {
+      "name": "i_vstamp",
+      "label": "Vstamp"
+    },
+    {
+      "name": "abstract",
+      "label": "Abstract"
+    },
+    {
+      "name": "archive_location",
+      "label": "Archive location"
+    },
+    {
+      "name": "archive_number",
+      "label": "Archive number"
+    },
+    {
+      "name": "artifact_storage_location",
+      "label": "Artifact storage location"
+    },
+    {
+      "name": "classification_artifact",
+      "label": "Classification artifact"
+    },
+    {
+      "name": "classification_domain",
+      "label": "Classification domain"
+    },
+    {
+      "name": "classification_group",
+      "label": "Classification group"
+    },
+    {
+      "name": "classification_subgroup",
+      "label": "Classification subgroup"
+    },
+    {
+      "name": "document_date",
+      "label": "Document date"
+    },
+    {
+      "name": "record_id",
+      "label": "Record id"
+    },
+    {
+      "name": "document_language",
+      "label": "Document language"
+    },
+    {
+      "name": "document_origin_site",
+      "label": "Document origin site"
+    },
+    {
+      "name": "document_owner",
+      "label": "Document owner"
+    },
+    {
+      "name": "document_version",
+      "label": "Document version"
+    },
+    {
+      "name": "dosage_form",
+      "label": "Dosage form"
+    },
+    {
+      "name": "formulation_number",
+      "label": "Formulation number"
+    },
+    {
+      "name": "full_title",
+      "label": "Full title"
+    },
+    {
+      "name": "health_authority",
+      "label": "Health authority"
+    },
+    {
+      "name": "indication",
+      "label": "Indication"
+    },
+    {
+      "name": "information_classification",
+      "label": "Information classification"
+    },
+    {
+      "name": "legacy_chronicle_id",
+      "label": "Legacy chronicle id"
+    },
+    {
+      "name": "legacy_creation_date",
+      "label": "Legacy creation date"
+    },
+    {
+      "name": "legacy_creator",
+      "label": "Legacy creator"
+    },
+    {
+      "name": "legacy_migration_history",
+      "label": "Legacy migration history"
+    },
+    {
+      "name": "legacy_modifier",
+      "label": "Legacy modifier"
+    },
+    {
+      "name": "legacy_modify_date",
+      "label": "Legacy modify date"
+    },
+    {
+      "name": "legacy_object_id",
+      "label": "Legacy object id"
+    },
+    {
+      "name": "legacy_object_type",
+      "label": "Legacy object type"
+    },
+    {
+      "name": "legacy_owner",
+      "label": "Legacy owner"
+    },
+    {
+      "name": "legacy_property_name",
+      "label": "Legacy property name"
+    },
+    {
+      "name": "legacy_property_value",
+      "label": "Legacy property value"
+    },
+    {
+      "name": "legacy_status",
+      "label": "Legacy status"
+    },
+    {
+      "name": "legacy_system",
+      "label": "Legacy system"
+    },
+    {
+      "name": "legacy_version_label",
+      "label": "Legacy version label"
+    },
+    {
+      "name": "legal_hold",
+      "label": "Legal hold"
+    },
+    {
+      "name": "literature_reference_list",
+      "label": "Literature reference list"
+    },
+    {
+      "name": "market",
+      "label": "Market"
+    },
+    {
+      "name": "material_number",
+      "label": "Material number"
+    },
+    {
+      "name": "organization",
+      "label": "Organization"
+    },
+    {
+      "name": "other_document_number",
+      "label": "Other document number"
+    },
+    {
+      "name": "other_report_numbers",
+      "label": "Other report numbers"
+    },
+    {
+      "name": "page_count",
+      "label": "Page count"
+    },
+    {
+      "name": "ppn",
+      "label": "Ppn"
+    },
+    {
+      "name": "ppnf",
+      "label": "Ppnf"
+    },
+    {
+      "name": "product_id",
+      "label": "Product id"
+    },
+    {
+      "name": "project_id",
+      "label": "Project id"
+    },
+    {
+      "name": "report_number",
+      "label": "Report number"
+    },
+    {
+      "name": "route_of_administration",
+      "label": "Route of administration"
+    },
+    {
+      "name": "security_domain",
+      "label": "Security domain"
+    },
+    {
+      "name": "status_last_updated",
+      "label": "Status last updated"
+    },
+    {
+      "name": "study_area",
+      "label": "Study area"
+    },
+    {
+      "name": "study_number",
+      "label": "Study number"
+    },
+    {
+      "name": "study_sub_area",
+      "label": "Study sub area"
+    },
+    {
+      "name": "test_substance",
+      "label": "Test substance"
+    },
+    {
+      "name": "type_of_document",
+      "label": "Type of document"
+    },
+    {
+      "name": "type_of_report",
+      "label": "Type of report"
+    },
+    {
+      "name": "used_in_submission",
+      "label": "Used in submission"
+    },
+    {
+      "name": "user_comments",
+      "label": "User comments"
+    },
+    {
+      "name": "publication_year",
+      "label": "Publication year"
+    },
+    {
+      "name": "adverse_event_id",
+      "label": "Adverse event id"
+    },
+    {
+      "name": "archiving_information",
+      "label": "Archiving information"
+    },
+    {
+      "name": "dispatch_date",
+      "label": "Dispatch date"
+    },
+    {
+      "name": "eudract_number",
+      "label": "Eudract number"
+    },
+    {
+      "name": "irb_iec_name",
+      "label": "Irb iec name"
+    },
+    {
+      "name": "other_study_number",
+      "label": "Other study number"
+    },
+    {
+      "name": "principal_investigator",
+      "label": "Principal investigator"
+    },
+    {
+      "name": "study_institution",
+      "label": "Study institution"
+    },
+    {
+      "name": "study_phase",
+      "label": "Study phase"
+    },
+    {
+      "name": "study_site_country",
+      "label": "Study site country"
+    },
+    {
+      "name": "study_site_identifier",
+      "label": "Study site identifier"
+    },
+    {
+      "name": "study_title",
+      "label": "Study title"
+    },
+    {
+      "name": "type_of_control",
+      "label": "Type of control"
+    },
+    {
+      "name": "type_of_study",
+      "label": "Type of study"
+    },
+    {
+      "name": "effective_date",
+      "label": "Effective date"
+    },
+    {
+      "name": "ib_version",
+      "label": "Ib version"
+    },
+    {
+      "name": "review_date",
+      "label": "Review date"
+    },
+    {
+      "name": "validity_end_date",
+      "label": "Validity end date"
+    },
+    {
+      "name": "document_base_number",
+      "label": "Document base number"
+    },
+    {
+      "name": "document_extension_number",
+      "label": "Document extension number"
+    },
+    {
+      "name": "species",
+      "label": "Species"
+    },
+    {
+      "name": "study_standard",
+      "label": "Study standard"
+    },
+    {
+      "name": "submission_comments",
+      "label": "Submission comments"
+    },
+    {
+      "name": "submission_readiness",
+      "label": "Submission readiness"
+    },
+    {
+      "name": "application_id",
+      "label": "Application id"
+    },
+    {
+      "name": "application_type",
+      "label": "Application type"
+    },
+    {
+      "name": "brain_event_code",
+      "label": "Brain event code"
+    },
+    {
+      "name": "dosage_strength",
+      "label": "Dosage strength"
+    },
+    {
+      "name": "manufacturing_site",
+      "label": "Manufacturing site"
+    },
+    {
+      "name": "procedure_number",
+      "label": "Procedure number"
+    },
+    {
+      "name": "region",
+      "label": "Region"
+    },
+    {
+      "name": "submission_id",
+      "label": "Submission id"
+    },
+    {
+      "name": "trade_name",
+      "label": "Trade name"
+    },
+    {
+      "name": "type_of_agency_meeting",
+      "label": "Type of agency meeting"
+    },
+    {
+      "name": "type_of_procedure",
+      "label": "Type of procedure"
+    },
+    {
+      "name": "type_of_submission",
+      "label": "Type of submission"
+    },
+    {
+      "name": "archive_comments",
+      "label": "Archive comments"
+    },
+    {
+      "name": "archive_status",
+      "label": "Archive status"
+    },
+    {
+      "name": "authority_registration",
+      "label": "Authority registration"
+    },
+    {
+      "name": "event_description",
+      "label": "Event description"
+    },
+    {
+      "name": "generic_name_inn",
+      "label": "Generic name inn"
+    },
+    {
+      "name": "originator_country",
+      "label": "Originator country"
+    },
+    {
+      "name": "originator_name",
+      "label": "Originator name"
+    },
+    {
+      "name": "originator_organization",
+      "label": "Originator organization"
+    },
+    {
+      "name": "recipient_country",
+      "label": "Recipient country"
+    },
+    {
+      "name": "recipient_name",
+      "label": "Recipient name"
+    },
+    {
+      "name": "recipient_organization",
+      "label": "Recipient organization"
+    },
+    {
+      "name": "regulatory_activity_date",
+      "label": "Regulatory activity date"
+    },
+    {
+      "name": "transfer_media",
+      "label": "Transfer media"
+    },
+    {
+      "name": "business_area",
+      "label": "Business area"
+    },
+    {
+      "name": "dispatch_to",
+      "label": "Dispatch to"
+    },
+    {
+      "name": "drug_substance_name",
+      "label": "Drug substance name"
+    },
+    {
+      "name": "label_id",
+      "label": "Label id"
+    },
+    {
+      "name": "label_sys",
+      "label": "Label sys"
+    },
+    {
+      "name": "label_version",
+      "label": "Label version"
+    },
+    {
+      "name": "labeling_status",
+      "label": "Labeling status"
+    },
+    {
+      "name": "labeling_status_date",
+      "label": "Labeling status date"
+    },
+    {
+      "name": "labeling_version",
+      "label": "Labeling version"
+    },
+    {
+      "name": "argus_case_number",
+      "label": "Argus case number"
+    },
+    {
+      "name": "period_end_date",
+      "label": "Period end date"
+    },
+    {
+      "name": "period_start_date",
+      "label": "Period start date"
+    },
+    {
+      "name": "company_name",
+      "label": "Company name"
+    },
+    {
+      "name": "document_category",
+      "label": "Document category"
+    },
+    {
+      "name": "document_subcategory",
+      "label": "Document subcategory"
+    },
+    {
+      "name": "journal_name",
+      "label": "Journal name"
+    },
+    {
+      "name": "reported_year",
+      "label": "Reported year"
+    },
+    {
+      "name": "license",
+      "label": "License"
+    },
+    {
+      "name": "publisher_name",
+      "label": "Publisher name"
+    },
+    {
+      "name": "series_title",
+      "label": "Series title"
+    },
+    {
+      "name": "archive_date",
+      "label": "Archive date"
+    },
+    {
+      "name": "chemist_code",
+      "label": "Chemist code"
+    },
+    {
+      "name": "corporate_source",
+      "label": "Corporate source"
+    },
+    {
+      "name": "start_of_first_experiment",
+      "label": "Start of first experiment"
+    },
+    {
+      "name": "start_of_last_experiment",
+      "label": "Start of last experiment"
+    },
+    {
+      "name": "user_id",
+      "label": "User id"
+    },
+    {
+      "name": "enforce_esignature",
+      "label": "Enforce esignature"
+    },
+    {
+      "name": "enforce_formal_review",
+      "label": "Enforce formal review"
+    },
+    {
+      "name": "document_status",
+      "label": "Document status"
+    },
+    {
+      "name": "tbo_calc_domain_abbrev",
+      "label": "Tbo calc domain abbrev"
+    },
+    {
+      "name": "tbo_calc_org_abbrev",
+      "label": "Tbo calc org abbrev"
+    },
+    {
+      "name": "sharepoint_locked",
+      "label": "Sharepoint locked"
+    },
+    {
+      "name": "in_vd_workflow",
+      "label": "In vd workflow"
+    },
+    {
+      "name": "import_as_major",
+      "label": "Import as major"
+    },
+    {
+      "name": "original_creation_date",
+      "label": "Original creation date"
+    },
+    {
+      "name": "import_filename",
+      "label": "Import filename"
+    }
+  ],
+  "rows": [],
+  "offset": 0,
+  "totalLength": 0
+}
